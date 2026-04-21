@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Install optional extras for the Terafox theme that live outside
+# the standard Omarchy theme directory.
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# --- OpenCode theme ---
+OPENCODE_THEMES_DIR="$HOME/.config/opencode/themes"
+OPENCODE_CONFIG="$HOME/.config/opencode/tui.json"
+
+if command -v opencode &>/dev/null; then
+  mkdir -p "$OPENCODE_THEMES_DIR"
+  cp "$SCRIPT_DIR/extras/opencode/terafox.json" "$OPENCODE_THEMES_DIR/terafox.json"
+
+  # Set the theme in tui.json if the file exists
+  if [[ -f "$OPENCODE_CONFIG" ]]; then
+    if command -v jq &>/dev/null; then
+      tmp=$(mktemp)
+      jq '.theme = "terafox"' "$OPENCODE_CONFIG" >"$tmp" && mv "$tmp" "$OPENCODE_CONFIG"
+    else
+      sed -i 's/"theme":\s*"[^"]*"/"theme": "terafox"/' "$OPENCODE_CONFIG"
+    fi
+  fi
+
+  # Reload OpenCode if running
+  if pgrep -x opencode &>/dev/null; then
+    killall -SIGUSR2 opencode 2>/dev/null || true
+  fi
+
+  echo "OpenCode theme installed and activated."
+else
+  echo "OpenCode not found, skipping OpenCode theme."
+fi
