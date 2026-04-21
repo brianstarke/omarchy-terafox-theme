@@ -2,6 +2,8 @@
 
 A dark teal theme for [Omarchy](https://omarchy.org/) based on the [Terafox](https://github.com/EdenEast/nightfox.nvim) colorscheme from the Nightfox family.
 
+![Terafox theme preview](preview.png)
+
 ## Palette
 
 | Role       | Color                                                        |
@@ -30,7 +32,7 @@ This installs the theme and applies it immediately. It includes:
 - Neovim colorscheme (via nightfox.nvim)
 - VS Code theme (via Nightfox extension)
 - Prussian green icon set
-- Three matching wallpapers
+- Nine matching wallpapers
 
 ### OpenCode theme (optional)
 
@@ -44,11 +46,17 @@ This copies the theme to `~/.config/opencode/themes/` and activates it.
 
 ## Wallpapers
 
-Three dark teal wallpapers are included that complement the color scheme:
+Nine wallpapers are included that complement the color scheme:
 
-1. **Teal Gradient** — minimalist dark teal abstract
+1. **Teal Gradient** — minimalist dark teal abstract gradient
 2. **Misty Forest** — dark forest with teal-cyan water
-3. **Dark Forest** — foggy forest with teal mist
+3. **Dark Forest** — foggy forest layers with teal mist
+4. **Ireland Forest** — dark mossy floor with deep teal-green shadows
+5. **Teal Waves Abstract** — luminous teal ribbons on a dark background
+6. **Teal Fog Forest** — dark conifers silhouetted against glowing teal fog
+7. **Sunbeams Water** — misty lakeside with teal haze and pale blue water
+8. **Evergreen Mist** — atmospheric mountainside conifers in cool fog
+9. **Cool Oysters** — oysters on ice with dark moody tones
 
 Cycle through them with `omarchy-theme-bg-next`.
 
