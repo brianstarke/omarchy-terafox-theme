@@ -21,7 +21,7 @@ A dark teal theme for [Omarchy](https://omarchy.org/) based on the [Terafox](htt
 ## Install
 
 ```bash
-omarchy-theme-install https://github.com/brianstarke/omarchy-terafox
+omarchy-theme-install git@github.com:brianstarke/omarchy-terafox-theme.git
 ```
 
 This installs the theme and applies it immediately. It includes:
