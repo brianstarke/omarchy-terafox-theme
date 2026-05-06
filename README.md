@@ -32,6 +32,7 @@ This installs the theme and applies it immediately. It includes:
 - Neovim colorscheme (via nightfox.nvim)
 - VS Code theme (via Nightfox extension)
 - Prussian green icon set
+- Lock screen logo
 - Nine matching wallpapers
 
 ### OpenCode theme (optional)
@@ -43,6 +44,22 @@ An [OpenCode](https://opencode.ai/) theme is included under `extras/`. To instal
 ```
 
 This copies the theme to `~/.config/opencode/themes/` and activates it.
+
+## Lock Screen
+
+A geometric cyberpunk fox logo is displayed on the lock screen.
+
+![Lock screen preview](preview-unlock.png)
+
+### Plymouth boot screen (optional)
+
+To also apply the logo to the Plymouth boot/SDDM login screen:
+
+```bash
+omarchy plymouth set by theme terafox
+```
+
+This requires sudo and rebuilds the initramfs.
 
 ## Wallpapers
 
