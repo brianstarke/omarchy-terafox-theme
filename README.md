@@ -1,6 +1,6 @@
 # Terafox for Omarchy
 
-A dark teal theme for [Omarchy](https://omarchy.org/) based on the [Terafox](https://github.com/EdenEast/nightfox.nvim) colorscheme from the Nightfox family.
+A dark teal theme for [Omarchy](https://omarchy.org/) v4 (Quattro) based on the [Terafox](https://github.com/EdenEast/nightfox.nvim) colorscheme from the Nightfox family.
 
 ![Terafox theme preview](preview.png)
 
@@ -27,12 +27,12 @@ omarchy-theme-install git@github.com:brianstarke/omarchy-terafox-theme.git
 This installs the theme and applies it immediately. It includes:
 
 - Terminal colors (Alacritty, Kitty, Ghostty)
-- Waybar styling
-- btop theme
+- Quickshell/OM shell styling
+- btop theme (generated from the palette)
 - Neovim colorscheme (via nightfox.nvim)
-- VS Code theme (via Nightfox extension)
+- VS Code: theme (via Nightfox extension)
 - Prussian green icon set
-- Lock screen logo
+- Quickshell lock screen logo
 - Nine matching wallpapers
 
 ### OpenCode theme (optional)
@@ -47,16 +47,25 @@ This copies the theme to `~/.config/opencode/themes/` and activates it.
 
 ## Lock Screen
 
-A geometric cyberpunk fox logo is displayed on the lock screen.
+A geometric cyberpunk fox logo is displayed on the v4 Quickshell lock screen.
 
 ![Lock screen preview](preview-unlock.png)
+
+### Screensaver logo (optional)
+
+An ASCII-art version of the fox logo is included as `screensaver.txt`. To use it as the terminal screensaver:
+
+```bash
+cp ~/.config/omarchy/themes/terafox/screensaver.txt \
+   ~/.config/omarchy/branding/screensaver.txt
+```
 
 ### Plymouth boot screen (optional)
 
 To also apply the logo to the Plymouth boot/SDDM login screen:
 
 ```bash
-omarchy plymouth set by theme terafox
+omarchy plymouth set-by-theme terafox
 ```
 
 This requires sudo and rebuilds the initramfs.
@@ -75,7 +84,7 @@ Nine wallpapers are included that complement the color scheme:
 8. **Evergreen Mist** — atmospheric mountainside conifers in cool fog
 9. **Cool Oysters** — oysters on ice with dark moody tones
 
-Cycle through them with `omarchy-theme-bg-next`.
+Cycle through them with `omarchy theme bg next` (or `omarchy-theme-bg-next`).
 
 ## Credits
 
